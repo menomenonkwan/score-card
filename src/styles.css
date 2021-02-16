@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
 :root {
@@ -10,7 +17,8 @@ body {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: var(--yellow);
   overflow-x: hidden;
 }
@@ -18,19 +26,39 @@ body {
 .App {
   font-family: sans-serif;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .container {
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header,
@@ -88,16 +116,25 @@ footer h6 {
   max-width: 1000px;
   margin: auto;
   padding: 0;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .card {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: var(--blue);
-  box-shadow: 0px 2px 7px black;
+  -webkit-box-shadow: 0px 2px 7px black;
+          box-shadow: 0px 2px 7px black;
   margin-bottom: 1rem;
   border-radius: 1rem;
   padding-top: 0;
@@ -106,7 +143,9 @@ footer h6 {
 
 .card h2 {
   padding-left: 10%;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   text-align: center;
   font-size: 2.5rem;
   margin: 0 1rem;
@@ -122,12 +161,18 @@ footer h6 {
   margin: 0;
   width: 10%;
   border-radius: 1rem 0 0 1rem;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 
 .card .del:hover {
-  transform: scale(1.1);
-  box-shadow: 0 2px 3px var(--black);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  background: #ce7f52;
+  -webkit-box-shadow: 0 2px 3px var(--black);
+          box-shadow: 0 2px 3px var(--black);
 }
 
 .card p {
@@ -144,7 +189,6 @@ footer h6 {
   margin: 0 0.5rem;
   color: var(--black);
   font-size: 2rem;
-
   border: none;
 }
 
@@ -161,59 +205,69 @@ input:focus:-webkit-autofill {
 }
 
 .item-enter {
-  transform: translateX(-120%);
+  -webkit-transform: translateX(-120%);
+      -ms-transform: translateX(-120%);
+          transform: translateX(-120%);
   opacity: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
   max-height: 0;
-  /* padding: 0 !important; */
 }
 .item-enter.item-enter-active {
   max-height: 86px;
   opacity: 1;
-  transform: translateX(0);
-  /* padding: 2rem 0 !important; */
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 .item-exit {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
   max-height: 86px;
-  transform: translateX(0);
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 .item-exit.item-exit-active {
-  transform: translateX(120%);
+  -webkit-transform: translateX(120%);
+      -ms-transform: translateX(120%);
+          transform: translateX(120%);
   opacity: 0;
   max-height: 0;
 }
 
 p.score {
-  /* position: relative; */
   position: relative;
   overflow: hidden;
-  /* float: left; */
 }
 
 p.score span {
   display: inline-block;
 }
-/* ul.order li span.count {
-  position: relative;
-  overflow: hidden;
-  float: left;
-}
-ul.order li span.count span {
-  display: inline-block;
-} */
 
 .score-enter {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
-  transform: translateY(120%) scale(0.25);
+  -webkit-transform: translateY(120%) scale(0.25);
+      -ms-transform: translateY(120%) scale(0.25);
+          transform: translateY(120%) scale(0.25);
 }
 .score-enter.score-enter-active {
-  transform: translateY(0) scale(1);
+  -webkit-transform: translateY(0) scale(1);
+      -ms-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
 }
 
 .score-exit {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
-  transform: translateY(0) scale(1);
+  -webkit-transform: translateY(0) scale(1);
+      -ms-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
   position: absolute;
   left: 0;
   right: 0;
@@ -221,5 +275,7 @@ ul.order li span.count span {
 }
 
 .score-exit.score-exit-active {
-  transform: translateY(-120%) scale(0.25);
+  -webkit-transform: translateY(-120%) scale(0.25);
+      -ms-transform: translateY(-120%) scale(0.25);
+          transform: translateY(-120%) scale(0.25);
 }
