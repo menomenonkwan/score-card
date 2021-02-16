@@ -1,4 +1,4 @@
-live demo: https://brannon-scorecard.netlify.app/
+live demo: https://brannonlee-scorecard.netlify.app/
 
 # score-card
 Created with CodeSandbox
