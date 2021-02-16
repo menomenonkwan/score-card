@@ -1,4 +1,4 @@
-live demo: https://csb-uzyvd.netlify.app/
+live demo: https://brannon-scorecard.netlify.app/
 
 # score-card
 Created with CodeSandbox
