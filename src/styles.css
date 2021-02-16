@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+:root {
+  --yellow: #fdce67;
+  --blue: #5bccfc;
+  --black: #030e12;
+}
+
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--yellow);
+  overflow-x: hidden;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+header h2 {
+  font-size: 4.75rem;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.008em;
+  margin: 0;
+}
+
+footer h6 {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.player-form {
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.player-form input {
+  border: 0;
+  height: 1.9rem;
+  margin: 0;
+  padding: 6px 0 7px;
+  background: none;
+}
+
+.player-form input::before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "\00a0";
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.player-form input::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  border-bottom: 2px solid #3f51b5;
+}
+
+.player-list {
+  min-width: 700px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 0;
+  flex: 1;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--blue);
+  box-shadow: 0px 2px 7px black;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.card h2 {
+  padding-left: 10%;
+  flex: 1;
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 0 1rem;
+  overflow-wrap: anywhere;
+}
+
+.card .del {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ce7f52;
+  height: 100%;
+  margin: 0;
+  width: 10%;
+  border-radius: 1rem 0 0 1rem;
+  transition: all 0.25s ease;
+}
+
+.card .del:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 3px var(--black);
+}
+
+.card p {
+  width: 100px;
+  background: var(--black);
+  color: var(--blue);
+  padding: 1rem 0;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.card button {
+  margin: 0 0.5rem;
+  color: var(--black);
+  font-size: 2rem;
+
+  border: none;
+}
+
+input:-webkit-autofill,
+input:focus:-webkit-autofill {
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0 100px var(--yellow) inset;
+}
+
+.show-autofill-new {
+  background-color: var(--yellow) !important;
+  background-image: none !important;
+  color: #000000 !important;
+}
+
+.item-enter {
+  transform: translateX(-120%);
+  opacity: 0;
+  transition: 0.5s;
+  max-height: 0;
+  /* padding: 0 !important; */
+}
+.item-enter.item-enter-active {
+  max-height: 86px;
+  opacity: 1;
+  transform: translateX(0);
+  /* padding: 2rem 0 !important; */
+}
+.item-exit {
+  transition: 0.5s;
+  max-height: 86px;
+  transform: translateX(0);
+}
+.item-exit.item-exit-active {
+  transform: translateX(120%);
+  opacity: 0;
+  max-height: 0;
+}
+
+p.score {
+  /* position: relative; */
+  position: relative;
+  overflow: hidden;
+  /* float: left; */
+}
+
+p.score span {
+  display: inline-block;
+}
+/* ul.order li span.count {
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+ul.order li span.count span {
+  display: inline-block;
+} */
+
+.score-enter {
+  transition: 0.5s;
+  transform: translateY(120%) scale(0.25);
+}
+.score-enter.score-enter-active {
+  transform: translateY(0) scale(1);
+}
+
+.score-exit {
+  transition: 0.5s;
+  transform: translateY(0) scale(1);
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.score-exit.score-exit-active {
+  transform: translateY(-120%) scale(0.25);
+}
